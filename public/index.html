@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mood Mapper</title>
+    <link rel="stylesheet" href="assets/css/survey.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-zF4BRsG/fLiTGfR9QL82DrilZxrwgY/+du4p/c7J72zZj+FLYq4zY00RylP9ZjiT" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <fieldset>
+            <section id="intro">
+                <h1 class="text-center">Welcome!</h1>
+                <p>   
+                    We are looking to understand the way in which mood may affect your daily life.
+                </p>
+                <p>Over the next 5 minutes we will ask you to:</p>
+                    <ol>
+                        <li>
+                            Read several lists of words that may describe your mood at any point in time and to order them by how often you experience them.
+                        </li>
+                        <li>
+                            Based on the words you selected, we will ask you to identify a picture representation of a face that best matches this word.
+                        </li>
+                    </ol>
+                <p>Please click "Next" to begin!</p>
+                <button class="btn-lg btn-primary" id="next0">Next</button>
+            </section>
+            <section class="row" id="item1">
+                <h4>Question 1</h4>
+                <h5>
+                    Review this question and answer it to the best of your ability.
+                </h5>
+                <p>
+                    People experience a range of specific mood states over the course of their week.
+                </p>
+                <p>
+                    Please drag the mood states you have experienced over the past two weeks from the left box into the right box--try to order them by the ones you representsmember most intensely!
+                </p>
+                <div id="items1" class="sort col-xs-4 well well-lg">
+                    <ol class="items list-group">
+                        <li class="items1 list btn btn-danger list-group-item">Panicked</li>
+                        <li class="items1 list btn btn-danger list-group-item">Playful</li>
+                        <li class="items1 list btn btn-danger list-group-item">Upset</li>
+                        <li class="items1 list btn btn-danger list-group-item">Desire</li>
+                        <li class="items1 list btn btn-danger list-group-item">Insisting</li>
+                        <li class="items1 list btn btn-danger list-group-item">Worried</li>
+                        <li class="items1 list btn btn-danger list-group-item">Fantasizing</li>
+                        <li class="items1 list btn btn-danger list-group-item">Uneasy</li>
+                        <li class="items1 list btn btn-danger list-group-item">Despondent</li>
+                        <li class="items1 list btn btn-danger list-group-item">Preoccupied</li>
+                        <li class="items1 list btn btn-danger list-group-item">Cautious</li>
+                        <li class="items1 list btn btn-danger list-group-item">Regretful</li>
+                        <li class="items1 list btn btn-danger list-group-item">Sceptical</li>
+                        <li class="items1 list btn btn-danger list-group-item">Anticipating</li>
+                        <li class="items1 list btn btn-danger list-group-item">Accusing</li>
+                        <li class="items1 list btn btn-danger list-group-item">Contemplative</li>
+                        <li class="items1 list btn btn-danger list-group-item">Thoughtful</li>
+                        <li class="items1 list btn btn-danger list-group-item">Doubtful</li>
+                        <li class="items1 list btn btn-danger list-group-item">Decisive</li>
+                        <li class="items1 list btn btn-danger list-group-item">Tentative</li>
+                        <li class="items1 list btn btn-danger list-group-item">Friendly</li>
+                        <li class="items1 list btn btn-danger list-group-item">Defiant</li>
+                        <li class="items1 list btn btn-danger list-group-item">Pensive</li>
+                        <li class="items1 list btn btn-danger list-group-item">Interested</li>
+                        <li class="items1 list btn btn-danger list-group-item">Hostile</li>
+                        <li class="items1 list btn btn-danger list-group-item">Reflective</li>
+                        <li class="items1 list btn btn-danger list-group-item">Flirtatious</li>
+                        <li class="items1 list btn btn-danger list-group-item">Confident</li>
+                        <li class="items1 list btn btn-danger list-group-item">Serious</li>
+                        <li class="items1 list btn btn-danger list-group-item">Concerned</li>
+                        <li class="items1 list btn btn-danger list-group-item">Distrustful</li>
+                        <li class="items1 list btn btn-danger list-group-item">Nervous</li>
+                        <li class="items1 list btn btn-danger list-group-item">Suspicious</li>
+                    </ol>
+                </div>
+                <div id="items2" class="sort col-xs-4 well well-lg">
+                    <ol class="items list-group">
+                    </ol>
+                </div>
+                <div id="items3" class="sort col-xs-4 well well-lg">
+                    <ol class="items list-group">
+                    </ol>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="col-xs-12">
+                    <button class="btn-lg btn-primary" id="next1">Next</button>
+                </div>
+            </section>
+           <!--  <section id="item1" class="form-group">
+                <h4>Question 1</h4>
+                <label for="item1" class="control-label">
+                    Please select the face that best represents your mood currently.
+                </label>
+                <div for="item1">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="fiveFace" id="fiveFaceId1" value="1" required>
+                                    <img height="100px" src="assets/img/face1.png" alt="face">
+                                  </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="fiveFace" id="fiveFaceId2" value="2" required>
+                                    <img height="100px" src="assets/img/face2.png" alt="face">
+                                  </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="fiveFace" id="fiveFaceId2" value="3" required>
+                                    <img height="100px" src="assets/img/face3.png" alt="face">
+                                  </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="fiveFace" id="fiveFaceId2" value="4" required>
+                                    <img height="100px" src="assets/img/face4.png" alt="face">
+                                  </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="fiveFace" id="fiveFaceId2" value="5" required>
+                                    <img height="100px" src="assets/img/face5.png" alt="face">
+                                  </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="btn-lg btn-primary" id="next1">Next</button>
+            </section>
+            <section id="item2" class="form-group">
+                <h4>Question 2</h4>
+                <label for="item2" class="control-label">
+                    Please select the number that best represents your mood currently, with 1 representing worst, and 5 represeenting best.
+                </label>
+                <div for="item2" class="btn-group btn-group-justified">
+                    <label class="radio btn btn-default">
+                        <input type="radio" name="fiveNumber" id="fiveNumberId1" value="1" required>
+                        1
+                    </label>
+                    <label class="radio btn btn-default">
+                        <input type="radio" name="fiveNumber" id="fiveNumberId2" value="2" required>
+                        2
+                    </label>
+                    <label class="radio btn btn-default">
+                        <input type="radio" name="fiveNumber" id="fiveNumberId2" value="3" required>
+                        3
+                    </label>
+                    <label class="radio btn btn-default">
+                        <input type="radio" name="fiveNumber" id="fiveNumberId2" value="4" required>
+                        4
+                    </label>
+                    <label class="radio btn btn-default">
+                        <input type="radio" name="fiveNumber" id="fiveNumberId2" value="5" required>
+                        5
+                    </label>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="btn-lg btn-primary" id="next2">Next</button>
+            </section>
+            <section id="item3" class="form-group">
+                <h4>Question 3</h4>
+                <label for="item3" class="control-label">
+                    Please select the face that best represents your mood currently.
+                </label>
+                <div for="item3">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="fourFace" id="fourFaceId1" value="1" required>
+                                    <img height="100px" src="assets/img/face1.png" alt="face">
+                                  </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="fourFace" id="fourFaceId2" value="2" required>
+                                    <img height="100px" src="assets/img/face2.png" alt="face">
+                                  </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="fourFace" id="fourFaceId2" value="3" required>
+                                    <img height="100px" src="assets/img/face4.png" alt="face">
+                                  </label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="fourFace" id="fourFaceId2" value="4" required>
+                                    <img height="100px" src="assets/img/face5.png" alt="face">
+                                  </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="btn-lg btn-primary" id="next3">Next</button>
+            </section>
+            <section id="item4" class="form-group">
+                <h4>Question 4</h4>
+                <label for="item4" class="control-label">
+                    Please select the number that best represents your mood currently, with 1 representing worst, and 4 represeenting best.
+                </label>
+                <div for="item4" class="btn-group btn-group-justified">
+                    <label class="radio btn btn-default">
+                        <input type="radio" name="fourNumber" id="fourNumberId1" value="1" required>
+                        1
+                    </label>
+                    <label class="radio btn btn-default">
+                        <input type="radio" name="fourNumber" id="fourNumberId2" value="2" required>
+                        2
+                    </label>
+                    <label class="radio btn btn-default">
+                        <input type="radio" name="fourNumber" id="fourNumberId2" value="3" required>
+                        3
+                    </label>
+                    <label class="radio btn btn-default">
+                        <input type="radio" name="fourNumber" id="fourNumberId2" value="4" required>
+                        4
+                    </label>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <button class="btn-lg btn-primary" id="next4">Next</button>
+            </section> -->
+            <section class="form-group" id="submit-button">
+                <h1 class="text-center">Click the button below to submit your answers!</h1>
+                <br>
+                <br>
+                <hr>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-danger btn-lg btn-block" id="submit">Submit</button>
+            </section>
+            <section id="outro">
+                <h1 class="text-center">Thank you!</h1>
+                <p>
+                    Bacon ipsum dolor amet ham prosciutto jowl, corned beef turkey shankle pork belly tenderloin tail shank bresaola meatloaf. Pork chop ground round pork belly, flank pastrami pork corned beef turducken shank shoulder. Short loin tongue kevin flank, tenderloin pancetta ball tip. Meatball drumstick filet mignon tongue corned beef, swine pork beef ribs spare ribs ball tip porchetta boudin kielbasa doner. Beef pancetta beef ribs leberkas frankfurter ham fatback.
+                </p>
+            </section>
+        </fieldset>
+    </div>
+    <script type="text/javascript">
+        $('div.sort li').disableSelection();
+        
+        $('#items1 ol').sortable({
+            revert: 'invalid',
+            connectWith: "#items3 ol, #items2 ol",
+            items: "li.items3, li.items2, li.items1"
+        });
+        
+        $('#items2 ol').sortable({
+            revert: 'invalid',
+            connectWith: "#items3 ol, #items1 ol",
+            items: "li.items3, li.items2, li.items1"
+        });
+        
+        $('#items3 ol').sortable({
+            revert: 'invalid',
+            connectWith: "#items1 ol, #items2 ol",
+            items: "li.items3, li.items2, li.items1"
+        });
+
+        $('.btn-default').on('click', function(){ 
+            $(this).toggleClass('.btn-success');
+        });
+        $('#intro').show();
+        $('#item1').hide();
+        // $('#item2').hide();
+        // $('#item3').hide();
+        // $('#item4').hide();
+        $('#submit-button').hide();
+        $('#outro').hide();
+
+        $('#next0').on('click', function(){
+            $('#intro').hide();
+            $('#item1').show();
+            return false;
+        });
+
+        $('#next1').on('click', function(){
+            // if ($("#item1 input[type='radio']:checked").length === 0) {
+            //     alert('Please select an answer');
+            // } else {
+                $('#item1').hide();
+                $('#submit-button').show();
+            // }
+            return false;
+        });
+
+        // $('#next2').on('click', function(){
+        //     if ($("#item2 input[type='radio']:checked").length === 0) {
+        //         alert('Please select an answer');
+        //     } else {
+        //         $('#item2').hide();
+        //         $('#item3').show();
+        //     }
+        //     return false;
+        // });
+
+        // $('#next3').on('click', function(){
+        //     if ($("#item3 input[type='radio']:checked").length === 0) {
+        //         alert('Please select an answer');
+        //     } else {
+        //         $('#item3').hide();
+        //         $('#item4').show();
+        //     }
+        //     return false;
+        // });
+
+        // $('#next4').on('click', function(){
+        //     if ($("#item4 input[type='radio']:checked").length === 0) {
+        //         alert('Please select an answer');
+        //     } else {
+        //         $('#item4').hide();
+        //         $('#submit-button').show();
+        //     }
+        //     return false;
+        // });
+
+        // Listener for submit button click
+        $('#submit').on('click', function(event) {
+            // prevents the default submit button action
+            event.preventDefault();
+            // Set local variables
+            var list1 = [];
+            var list2 = [];
+            var list3 = [];
+
+            $('#items1 ol li').each(function(){
+                list1.push(this.innerText);
+            });
+
+            $('#items2 ol li').each(function(){
+                list2.push(this.innerText);
+            });
+
+            $('#items3 ol li').each(function(){
+                list3.push(this.innerText);
+            });
+
+            // Set data to be sent to server
+            var survey = {
+                list1: list1,
+                list2: list2,
+                list3: list3
+            };
+
+            console.log(survey);
+
+            // // Grab the URL of the website
+            // var currentURL = window.location.origin;
+
+            // AJAX post the data 
+            $.post('/', survey, function(data) {
+                $('#submit-button').hide();
+                $('#outro').show();
+            });
+        });
+    </script>
+</body>
+
+</html>
