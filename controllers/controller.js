@@ -17,12 +17,10 @@ module.exports = function(app) {
         }
         console.log(survey);
         // Create the new survey in Survey
-        Survey.create(survey, function(err, doc) {
-
-            if (err) {
-                console.log(err);
-                res.redirect('/');
-            }
+        Survey.create(survey).then(function() {
+            response.redirect('/');
+        }).catch(function(err) {
+            console.log(err);
         });
     })
 };
