@@ -4,15 +4,7 @@ var autoIncrement = require('mongoose-auto-increment');
 
 // Define Survey schema
 var SurveySchema = new Schema({
-    list1: [{
-        type: String
-    }],
-    list2: [{
-        type: String
-    }],
-    list3: [{
-        type: String
-    }]
+    surveyData: {}
 });
  
 // Add the incrementer

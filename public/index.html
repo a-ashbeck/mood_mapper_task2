@@ -45,21 +45,21 @@
                 </p>
                 <div id="items1" class="sort col-xs-4 well well-lg">
                     <ol class="items list-group">
-                        <li class="items1 list btn btn-danger list-group-item">Tense</li>
-                        <li class="items1 list btn btn-danger list-group-item">Nervous</li>
-                        <li class="items1 list btn btn-danger list-group-item">Stressed</li>
-                        <li class="items1 list btn btn-danger list-group-item">Upset</li>
-                        <li class="items1 list btn btn-danger list-group-item">Alert</li>
-                        <li class="items1 list btn btn-danger list-group-item">Excited</li>
-                        <li class="items1 list btn btn-danger list-group-item">Elated</li>
-                        <li class="items1 list btn btn-danger list-group-item">Happy</li>
-                        <li class="items1 list btn btn-danger list-group-item">Sad</li>
-                        <li class="items1 list btn btn-danger list-group-item">Depressed</li>
-                        <li class="items1 list btn btn-danger list-group-item">Bored</li>
-                        <li class="items1 list btn btn-danger list-group-item">Contented</li>
-                        <li class="items1 list btn btn-danger list-group-item">Serene</li>
-                        <li class="items1 list btn btn-danger list-group-item">Relaxed</li>
-                        <li class="items1 list btn btn-danger list-group-item">Calm</li>
+                        <li class="items1 list panel panel-default text-center">Tense</li>
+                        <li class="items1 list panel panel-default text-center">Nervous</li>
+                        <li class="items1 list panel panel-default text-center">Stressed</li>
+                        <li class="items1 list panel panel-default text-center">Upset</li>
+                        <li class="items1 list panel panel-default text-center">Alert</li>
+                        <li class="items1 list panel panel-default text-center">Excited</li>
+                        <li class="items1 list panel panel-default text-center">Elated</li>
+                        <li class="items1 list panel panel-default text-center">Happy</li>
+                        <li class="items1 list panel panel-default text-center">Sad</li>
+                        <li class="items1 list panel panel-default text-center">Depressed</li>
+                        <li class="items1 list panel panel-default text-center">Bored</li>
+                        <li class="items1 list panel panel-default text-center">Contented</li>
+                        <li class="items1 list panel panel-default text-center">Serene</li>
+                        <li class="items1 list panel panel-default text-center">Relaxed</li>
+                        <li class="items1 list panel panel-default text-center">Calm</li>
                     </ol>
                 </div>
                 <div id="items2" class="sort col-xs-4 well well-lg">
@@ -350,32 +350,44 @@
             var list2 = [];
             var list3 = [];
 
-            $('#items1 ol li').each(function(){
-                list1.push(this.innerText);
+            $('#items1 ol li').each(function(index, value) {
+                var obj = {
+                    word: value.innerText,
+                    position: index + 1
+                };
+                list1.push(obj);
             });
 
-            $('#items2 ol li').each(function(){
-                list2.push(this.innerText);
+            $('#items2 ol li').each(function(index, value) {
+                var obj = {
+                    word: value.innerText,
+                    position: index + 1
+                };
+                list2.push(obj);
             });
 
-            $('#items3 ol li').each(function(){
-                list3.push(this.innerText);
+            $('#items3 ol li').each(function(index, value) {
+                var obj = {
+                    word: value.innerText,
+                    position: index + 1
+                };
+                list3.push(obj);
             });
 
             // Set data to be sent to server
-            var survey = {
+            var surveyData = {
                 list1: list1,
                 list2: list2,
                 list3: list3
             };
 
-            console.log(survey);
+            console.log(surveyData);
 
             // // Grab the URL of the website
             // var currentURL = window.location.origin;
 
             // AJAX post the data 
-            $.post('/', survey, function(data) {
+            $.post('/', surveyData, function(data) {
                 $('#submit-button').hide();
                 $('#outro').show();
             });
