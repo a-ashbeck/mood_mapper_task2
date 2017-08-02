@@ -32,8 +32,8 @@
                 <p>Please click "Next" to begin!</p>
                 <button class="btn-lg btn-primary" id="next0">Next</button>
             </section>
-            <section class="row" id="item1">
-                <h4>Question 1</h4>
+            <section class="row" id="section1">
+                <h4>Section 1</h4>
                 <h5>
                     Review this question and answer it to the best of your ability.
                 </h5>
@@ -78,174 +78,667 @@
                     <button class="btn-lg btn-primary" id="next1">Next</button>
                 </div>
             </section>
-           <!--  <section id="item1" class="form-group">
-                <h4>Question 1</h4>
-                <label for="item1" class="control-label">
-                    Please select the face that best represents your mood currently.
-                </label>
-                <div for="item1">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="fiveFace" id="fiveFaceId1" value="1" required>
-                                    <img height="100px" src="assets/img/face1.png" alt="face">
-                                  </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="fiveFace" id="fiveFaceId2" value="2" required>
-                                    <img height="100px" src="assets/img/face2.png" alt="face">
-                                  </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="fiveFace" id="fiveFaceId2" value="3" required>
-                                    <img height="100px" src="assets/img/face3.png" alt="face">
-                                  </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="fiveFace" id="fiveFaceId2" value="4" required>
-                                    <img height="100px" src="assets/img/face4.png" alt="face">
-                                  </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="fiveFace" id="fiveFaceId2" value="5" required>
-                                    <img height="100px" src="assets/img/face5.png" alt="face">
-                                  </label>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+            <section class="row form-group" id="section2">
+                <h4>Section 2</h4>
+                <h5>
+                    Review this question and answer it to the best of your ability.
+                </h5>
+                <p>
+                    Now that you have identified the mood states that you have experienced the most over the past week, select the faces that best expresses each mood state:
+                </p>
+                <div class="form-group" id="emotion1">
+                    <label for="emotion1" class="control-label">
+                        Tense
+                    </label>
+                    <div for="emotion1">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace1" id="emotion1Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace1" id="emotion1Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace1" id="emotion1Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace1" id="emotion1Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion2">
+                    <label for="emotion2" class="control-label">
+                        Nervous
+                    </label>
+                    <div for="emotion2">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace2" id="emotion2Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace2" id="emotion2Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace2" id="emotion2Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace2" id="emotion2Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion3">
+                    <label for="emotion3" class="control-label">
+                        Stressed
+                    </label>
+                    <div for="emotion3">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace3" id="emotion3Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace3" id="emotion3Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace3" id="emotion3Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace3" id="emotion3Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion4">
+                    <label for="emotion4" class="control-label">
+                        Upset
+                    </label>
+                    <div for="emotion4">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace4" id="emotion4Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace4" id="emotion4Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace4" id="emotion4Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace4" id="emotion4Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion5">
+                    <label for="emotion5" class="control-label">
+                        Alert
+                    </label>
+                    <div for="emotion5">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace5" id="emotion5Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace5" id="emotion5Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace5" id="emotion5Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace5" id="emotion5Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion6">
+                    <label for="emotion6" class="control-label">
+                        Excited
+                    </label>
+                    <div for="emotion6">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace6" id="emotion6Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace6" id="emotion6Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace6" id="emotion6Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace6" id="emotion6Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion7">
+                    <label for="emotion7" class="control-label">
+                        Elated
+                    </label>
+                    <div for="emotion7">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace7" id="emotion7Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace7" id="emotion7Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace7" id="emotion7Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace7" id="emotion7Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion8">
+                    <label for="emotion8" class="control-label">
+                        Happy
+                    </label>
+                    <div for="emotion8">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace8" id="emotion8Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace8" id="emotion8Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace8" id="emotion8Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace8" id="emotion8Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion9">
+                    <label for="emotion9" class="control-label">
+                        Sad
+                    </label>
+                    <div for="emotion9">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace9" id="emotion9Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace9" id="emotion9Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace9" id="emotion9Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace9" id="emotion9Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion10">
+                    <label for="emotion10" class="control-label">
+                        Depressed
+                    </label>
+                    <div for="emotion10">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace10" id="emotion10Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace10" id="emotion10Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace10" id="emotion10Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace10" id="emotion10Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion11">
+                    <label for="emotion11" class="control-label">
+                        Bored
+                    </label>
+                    <div for="emotion11">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace11" id="emotion11Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace11" id="emotion11Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace11" id="emotion11Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace11" id="emotion11Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion12">
+                    <label for="emotion12" class="control-label">
+                        Contented
+                    </label>
+                    <div for="emotion12">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace12" id="emotion12Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace12" id="emotion12Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace12" id="emotion12Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace12" id="emotion12Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion13">
+                    <label for="emotion13" class="control-label">
+                        Serene
+                    </label>
+                    <div for="emotion13">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace13" id="emotion13Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace13" id="emotion13Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace13" id="emotion13Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace13" id="emotion13Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion14">
+                    <label for="emotion14" class="control-label">
+                        Relaxed
+                    </label>
+                    <div for="emotion14">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace14" id="emotion14Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace14" id="emotion14Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace14" id="emotion14Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace14" id="emotion14Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-group" id="emotion15">
+                    <label for="emotion15" class="control-label">
+                        Calm
+                    </label>
+                    <div for="emotion15">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace15" id="emotion15Id1" value="1" required>
+                                        <img height="100px" src="assets/img/face1.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace15" id="emotion15Id2" value="2" required>
+                                        <img height="100px" src="assets/img/face2.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace15" id="emotion15Id3" value="3" required>
+                                        <img height="100px" src="assets/img/face4.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="radio">
+                                      <label>
+                                        <input type="radio" name="emotionFace15" id="emotion15Id4" value="4" required>
+                                        <img height="100px" src="assets/img/face5.png" alt="face">
+                                      </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
                 <br>
                 <br>
                 <br>
                 <br>
-                <button class="btn-lg btn-primary" id="next1">Next</button>
+                <div class="col-xs-12">
+                    <button class="btn-lg btn-primary" id="next2">Next</button>
+                </div>
             </section>
-            <section id="item2" class="form-group">
-                <h4>Question 2</h4>
-                <label for="item2" class="control-label">
-                    Please select the number that best represents your mood currently, with 1 representing worst, and 5 represeenting best.
-                </label>
-                <div for="item2" class="btn-group btn-group-justified">
-                    <label class="radio btn btn-default">
-                        <input type="radio" name="fiveNumber" id="fiveNumberId1" value="1" required>
-                        1
-                    </label>
-                    <label class="radio btn btn-default">
-                        <input type="radio" name="fiveNumber" id="fiveNumberId2" value="2" required>
-                        2
-                    </label>
-                    <label class="radio btn btn-default">
-                        <input type="radio" name="fiveNumber" id="fiveNumberId2" value="3" required>
-                        3
-                    </label>
-                    <label class="radio btn btn-default">
-                        <input type="radio" name="fiveNumber" id="fiveNumberId2" value="4" required>
-                        4
-                    </label>
-                    <label class="radio btn btn-default">
-                        <input type="radio" name="fiveNumber" id="fiveNumberId2" value="5" required>
-                        5
-                    </label>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <button class="btn-lg btn-primary" id="next2">Next</button>
-            </section>
-            <section id="item3" class="form-group">
-                <h4>Question 3</h4>
-                <label for="item3" class="control-label">
-                    Please select the face that best represents your mood currently.
-                </label>
-                <div for="item3">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="fourFace" id="fourFaceId1" value="1" required>
-                                    <img height="100px" src="assets/img/face1.png" alt="face">
-                                  </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="fourFace" id="fourFaceId2" value="2" required>
-                                    <img height="100px" src="assets/img/face2.png" alt="face">
-                                  </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="fourFace" id="fourFaceId2" value="3" required>
-                                    <img height="100px" src="assets/img/face4.png" alt="face">
-                                  </label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="radio">
-                                  <label>
-                                    <input type="radio" name="fourFace" id="fourFaceId2" value="4" required>
-                                    <img height="100px" src="assets/img/face5.png" alt="face">
-                                  </label>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <button class="btn-lg btn-primary" id="next3">Next</button>
-            </section>
-            <section id="item4" class="form-group">
-                <h4>Question 4</h4>
-                <label for="item4" class="control-label">
-                    Please select the number that best represents your mood currently, with 1 representing worst, and 4 represeenting best.
-                </label>
-                <div for="item4" class="btn-group btn-group-justified">
-                    <label class="radio btn btn-default">
-                        <input type="radio" name="fourNumber" id="fourNumberId1" value="1" required>
-                        1
-                    </label>
-                    <label class="radio btn btn-default">
-                        <input type="radio" name="fourNumber" id="fourNumberId2" value="2" required>
-                        2
-                    </label>
-                    <label class="radio btn btn-default">
-                        <input type="radio" name="fourNumber" id="fourNumberId2" value="3" required>
-                        3
-                    </label>
-                    <label class="radio btn btn-default">
-                        <input type="radio" name="fourNumber" id="fourNumberId2" value="4" required>
-                        4
-                    </label>
-                </div>
-                <br>
-                <br>
-                <br>
-                <br>
-                <button class="btn-lg btn-primary" id="next4">Next</button>
-            </section> -->
             <section class="form-group" id="submit-button">
                 <h1 class="text-center">Click the button below to submit your answers!</h1>
                 <br>
@@ -264,6 +757,7 @@
         </fieldset>
     </div>
     <script type="text/javascript">
+        // Functions to handle draggables
         $('div.sort li').disableSelection();
         
         $('#items1 ol').sortable({
@@ -284,62 +778,36 @@
             items: "li.items3, li.items2, li.items1"
         });
 
-        $('.btn-default').on('click', function(){ 
-            $(this).toggleClass('.btn-success');
-        });
+
+        // Single page logic
         $('#intro').show();
-        $('#item1').hide();
-        // $('#item2').hide();
-        // $('#item3').hide();
-        // $('#item4').hide();
+        $('#section1').hide();
+        $('#section2').hide();
         $('#submit-button').hide();
         $('#outro').hide();
 
         $('#next0').on('click', function(){
             $('#intro').hide();
-            $('#item1').show();
+            $('#section1').show();
             return false;
         });
 
         $('#next1').on('click', function(){
-            // if ($("#item1 input[type='radio']:checked").length === 0) {
-            //     alert('Please select an answer');
-            // } else {
-                $('#item1').hide();
-                $('#submit-button').show();
-            // }
+            $('#section1').hide();
+            $('#section2').show();
             return false;
         });
 
-        // $('#next2').on('click', function(){
-        //     if ($("#item2 input[type='radio']:checked").length === 0) {
-        //         alert('Please select an answer');
-        //     } else {
-        //         $('#item2').hide();
-        //         $('#item3').show();
-        //     }
-        //     return false;
-        // });
+        $('#next2').on('click', function(){
+            if ($(".form-group input[type='radio']:checked").length < 15) {
+                alert('Please answer all items');
+            } else {
+                $('#section2').hide();
+                $('#submit-button').show();
+            }
+            return false;
+        });
 
-        // $('#next3').on('click', function(){
-        //     if ($("#item3 input[type='radio']:checked").length === 0) {
-        //         alert('Please select an answer');
-        //     } else {
-        //         $('#item3').hide();
-        //         $('#item4').show();
-        //     }
-        //     return false;
-        // });
-
-        // $('#next4').on('click', function(){
-        //     if ($("#item4 input[type='radio']:checked").length === 0) {
-        //         alert('Please select an answer');
-        //     } else {
-        //         $('#item4').hide();
-        //         $('#submit-button').show();
-        //     }
-        //     return false;
-        // });
 
         // Listener for submit button click
         $('#submit').on('click', function(event) {
@@ -382,9 +850,6 @@
             };
 
             console.log(surveyData);
-
-            // // Grab the URL of the website
-            // var currentURL = window.location.origin;
 
             // AJAX post the data 
             $.post('/', surveyData, function(data) {
