@@ -813,43 +813,76 @@
         $('#submit').on('click', function(event) {
             // prevents the default submit button action
             event.preventDefault();
+
             // Set local variables
-            var list1 = [];
-            var list2 = [];
-            var list3 = [];
+            var Tense = parseInt($("#emotion1 input[type='radio']:checked").val());
+            var Nervous = parseInt($("#emotion2 input[type='radio']:checked").val());
+            var Stressed = parseInt($("#emotion3 input[type='radio']:checked").val());
+            var Upset = parseInt($("#emotion4 input[type='radio']:checked").val());
+            var Alert = parseInt($("#emotion5 input[type='radio']:checked").val());
+            var Excited = parseInt($("#emotion6 input[type='radio']:checked").val());
+            var Elated = parseInt($("#emotion7 input[type='radio']:checked").val());
+            var Happy = parseInt($("#emotion8 input[type='radio']:checked").val());
+            var Sad = parseInt($("#emotion9 input[type='radio']:checked").val());
+            var Depressed = parseInt($("#emotion10 input[type='radio']:checked").val());
+            var Bored = parseInt($("#emotion11 input[type='radio']:checked").val());
+            var Contented = parseInt($("#emotion12 input[type='radio']:checked").val());
+            var Serene = parseInt($("#emotion13 input[type='radio']:checked").val());
+            var Relaxed = parseInt($("#emotion14 input[type='radio']:checked").val());
+            var Calm = parseInt($("#emotion15 input[type='radio']:checked").val());
+
+            var surveyData = {
+                emotionRank: {
+                    list1: {},
+                    list2: {},
+                    list3: {}
+                },
+                Tense: Tense,
+                Nervous: Nervous,
+                Stressed: Stressed,
+                Upset: Upset,
+                Alert: Alert,
+                Excited: Excited,
+                Elated: Elated,
+                Happy: Happy,
+                Sad: Sad,
+                Depressed: Depressed,
+                Bored: Bored,
+                Contented: Contented,
+                Serene: Serene,
+                Relaxed: Relaxed,
+                Calm: Calm
+            }
 
             $('#items1 ol li').each(function(index, value) {
-                var obj = {
-                    word: value.innerText,
+                var index = index;
+                var word = String(value.innerText);
+                surveyData.emotionRank.list1[index + 1] = {
+                    word: word,
                     position: index + 1
                 };
-                list1.push(obj);
             });
 
             $('#items2 ol li').each(function(index, value) {
-                var obj = {
-                    word: value.innerText,
+                var index = index;
+                var word = String(value.innerText);
+                surveyData.emotionRank.list2[index + 1] = {
+                    word: word,
                     position: index + 1
                 };
-                list2.push(obj);
             });
 
             $('#items3 ol li').each(function(index, value) {
-                var obj = {
-                    word: value.innerText,
+                var index = index;
+                var word = String(value.innerText);
+                surveyData.emotionRank.list3[index + 1] = {
+                    word: word,
                     position: index + 1
                 };
-                list3.push(obj);
             });
 
-            // Set data to be sent to server
-            var surveyData = {
-                list1: list1,
-                list2: list2,
-                list3: list3
-            };
-
             console.log(surveyData);
+            console.log(surveyData.emotionRank);
 
             // AJAX post the data 
             $.post('/', surveyData, function(data) {
