@@ -43,7 +43,8 @@
                 <p>
                     Please drag the mood states you have experienced over the past two weeks from the left box into the right box--try to order them by the ones you representsmember most intensely!
                 </p>
-                <div id="items1" class="sort col-xs-4 well well-lg">
+                <div id="items1" class="sort col-xs-offset-1 col-xs-4 well well-lg">
+                    <h5>Mood State Words</h5>
                     <ol class="items list-group">
                         <li class="items1 list panel panel-default text-center">Tense</li>
                         <li class="items1 list panel panel-default text-center">Nervous</li>
@@ -62,11 +63,8 @@
                         <li class="items1 list panel panel-default text-center">Calm</li>
                     </ol>
                 </div>
-                <div id="items2" class="sort col-xs-4 well well-lg">
-                    <ol class="items list-group">
-                    </ol>
-                </div>
-                <div id="items3" class="sort col-xs-4 well well-lg">
+                <div id="items2" class="sort col-xs-offset-1 col-xs-4 well well-lg">
+                    <h5>Moods States Felt in the Last Two Weeks</h5>
                     <ol class="items list-group">
                     </ol>
                 </div>
@@ -750,8 +748,8 @@
             </section>
             <section id="outro">
                 <h1 class="text-center">Thank you!</h1>
-                <p>
-                    Bacon ipsum dolor amet ham prosciutto jowl, corned beef turkey shankle pork belly tenderloin tail shank bresaola meatloaf. Pork chop ground round pork belly, flank pastrami pork corned beef turducken shank shoulder. Short loin tongue kevin flank, tenderloin pancetta ball tip. Meatball drumstick filet mignon tongue corned beef, swine pork beef ribs spare ribs ball tip porchetta boudin kielbasa doner. Beef pancetta beef ribs leberkas frankfurter ham fatback.
+                <p class="text-center">
+                    Your feedback is greatly appreciated!
                 </p>
             </section>
         </fieldset>
@@ -762,20 +760,14 @@
         
         $('#items1 ol').sortable({
             revert: 'invalid',
-            connectWith: "#items3 ol, #items2 ol",
-            items: "li.items3, li.items2, li.items1"
+            connectWith: "#items2 ol",
+            items: "li.items2, li.items1"
         });
         
         $('#items2 ol').sortable({
             revert: 'invalid',
-            connectWith: "#items3 ol, #items1 ol",
-            items: "li.items3, li.items2, li.items1"
-        });
-        
-        $('#items3 ol').sortable({
-            revert: 'invalid',
-            connectWith: "#items1 ol, #items2 ol",
-            items: "li.items3, li.items2, li.items1"
+            connectWith: "#items1 ol",
+            items: "li.items2, li.items1"
         });
 
 
@@ -833,9 +825,7 @@
 
             var surveyData = {
                 emotionRank: {
-                    list1: {},
-                    list2: {},
-                    list3: {}
+                    list: {}
                 },
                 Tense: Tense,
                 Nervous: Nervous,
@@ -854,30 +844,11 @@
                 Calm: Calm
             }
 
-            $('#items1 ol li').each(function(index, value) {
-                var index = index;
-                var word = String(value.innerText);
-                surveyData.emotionRank.list1[index + 1] = {
-                    word: word,
-                    position: index + 1
-                };
-            });
-
             $('#items2 ol li').each(function(index, value) {
-                var index = index;
-                var word = String(value.innerText);
-                surveyData.emotionRank.list2[index + 1] = {
-                    word: word,
-                    position: index + 1
-                };
-            });
-
-            $('#items3 ol li').each(function(index, value) {
-                var index = index;
-                var word = String(value.innerText);
-                surveyData.emotionRank.list3[index + 1] = {
-                    word: word,
-                    position: index + 1
+                var placeholder = index + 1;
+                surveyData.emotionRank.list[placeholder] = {
+                    word: value.innerText,
+                    position: placeholder
                 };
             });
 
