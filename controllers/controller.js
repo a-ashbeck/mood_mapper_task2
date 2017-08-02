@@ -1,6 +1,6 @@
 // Require dependencies
 var express = require('express');
-var db = require('../models');
+var db = require('../models/Survey.model');
 
 // Export controller defined routes
 module.exports = function(app) {

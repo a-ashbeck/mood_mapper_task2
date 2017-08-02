@@ -1,30 +1,51 @@
 // Require dependencies
 var express = require('express');
-var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
-var db = require('./models');
+var mongoose = require('mongoose');
+var methodOverride = require('method-override');
+var Promise = require('bluebird');
+var autoIncrement = require('mongoose-auto-increment');
+mongoose.Promise = Promise;
 
-// Server setup variables
+// Initialize Express
 var app = express();
-var PORT = process.env.PORT || 8000;
 
-// Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(__dirname + '/public'));
+// Set the port
+var PORT = process.env.PORT || 3000;
 
-// Parse application/x-www-form-urlencoded
+// Set up body parser
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+// Setup static directory
+app.use(express.static(__dirname + '/public'));
 
 // Override with POST having ?_method=DELETE
 app.use(methodOverride('_method'));
 
-// Require the routes set in controller.js
-require('./controllers/controller.js')(app);
+// Database configuration with mongoose
+mongoose.connect(
+	'mongodb://heroku_hwl3jfjd:dtbj253tsvcs2seet8s86poi0e@ds161059.mlab.com:61059/heroku_hwl3jfjd'
+);
+var db = mongoose.connection;
 
-// Syncing our sequelize models and then starting our express app
-db.sequelize.sync().then(function() {
-    app.listen(PORT, function() {
-        console.log("App listening on PORT " + PORT);
-    });
-}).catch(function(err) {
-    console.log(err);
+// Initialize aut-increment
+autoIncrement.initialize(db);
+
+// Show any mongoose errors
+db.on('error', function(error) {
+  console.log('Mongoose Error: ', error);
 });
+
+// Once logged in to the db through mongoose, log a success message
+db.once('open', function() {
+  console.log('Mongoose connection successful.');
+});
+
+// Listen on port 3000
+app.listen(PORT, function() {
+  console.log('App running on port ' + PORT);
+});
+
+// Require routes from controller
+require('./controllers/controller.js')(app);
