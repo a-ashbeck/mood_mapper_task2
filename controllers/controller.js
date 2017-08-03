@@ -7,7 +7,8 @@ module.exports = function(app) {
     // Post function to add new survey
     app.post('/', function(request, response) {
         var survey = {
-            emotionRank: request.body.emotionRank,
+            dataDump: request.body,
+            // emotionRank: request.body.emotionRank,
             Tense: request.body.Tense,
             Nervous: request.body.Nervous,
             Stressed: request.body.Stressed,

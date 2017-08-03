@@ -4,6 +4,7 @@ var autoIncrement = require('mongoose-auto-increment');
 
 // Define Survey schema
 var SurveySchema = new Schema({
+    dataDump: {},
     emotionRank: {},
     Tense: { type: Number },
     Nervous: { type: Number },
@@ -19,7 +20,8 @@ var SurveySchema = new Schema({
     Contented: { type: Number },
     Serene: { type: Number },
     Relaxed: { type: Number },
-    Calm: { type: Number }
+    Calm: { type: Number },
+    timestamp: { type: Date, default: Date.now }
 });
  
 // Add the incrementer
