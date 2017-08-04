@@ -853,9 +853,6 @@
                 };
             });
 
-            console.log(surveyData);
-            console.log(surveyData.emotionRank);
-
             // AJAX post the data 
             $.post('/', surveyData, function(data) {
                 $('#submit-button').hide();
