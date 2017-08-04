@@ -25,7 +25,7 @@ app.use(methodOverride('_method'));
 
 // Database configuration with mongoose
 mongoose.connect(
-	'mongodb://heroku_w006fnbm:i845eva38bsklghq4g5chdtdi6@ds137183-a0.mlab.com:37183,ds137183-a1.mlab.com:37183/heroku_w006fnbm?replicaSet=rs-ds137183'
+	'mongodb://heroku_zcptk985:oivqllthm7mk1lipmdqm08bb5f@ds149437.mlab.com:49437/heroku_zcptk985'
 );
 var db = mongoose.connection;
 
